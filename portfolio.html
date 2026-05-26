@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title> Afnan Fauzi Prakoso— Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Rajdhani:wght@300;400;500;600;700&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <canvas id="bgCanvas"></canvas>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-brand">
+      <span class="pac-icon">👾</span>
+      <span class="brand-text">PERSONAL BRANDING</span>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html"     class="nav-link">HOME</a></li>
+      <li><a href="about.html"     class="nav-link">ABOUT</a></li>
+      <li><a href="skills.html"    class="nav-link">SKILLS</a></li>
+      <li><a href="portfolio.html" class="nav-link active">PORTFOLIO</a></li>
+      <li><a href="cv.html"        class="nav-link">CV</a></li>
+    </ul>
+  </nav>
+
+  <!-- ════════ PAGE 4 — PORTFOLIO ════════ -->
+  <main class="page">
+
+    <div class="section-header">
+      <span class="section-number pixel-text">04</span>
+      <h2 class="section-title">PORTFOLIO</h2>
+      <span class="section-line"></span>
+    </div>
+
+    <div class="portfolio-grid">
+
+      <!--
+        CARA MENAMBAH KARYA BARU:
+        Salin satu blok .portfolio-card di bawah ini,
+        lalu ganti: src gambar, href link, judul, deskripsi, dan tag.
+      -->
+
+      <!-- KARYA 1 -->
+      <div class="portfolio-card fade-in">
+        <div class="port-img-wrap">
+          <!-- GANTI src dengan screenshot karya kamu -->
+          <img src="foto/foto porto1.png" alt="Project 1" class="port-img" />
+          <div class="port-img-fallback">
+            <span class="pixel-text">PROJECT 1</span>
+          </div>
+          <div class="port-overlay">
+            <!-- GANTI href dengan link karya kamu -->
+            <a href="https://automotivetechnew.page.gd/" target="_blank" class="port-link-btn pixel-text">LIHAT ▶</a>
+          </div>
+        </div>
+        <div class="port-info">
+          <!-- GANTI TAG: Web / Desain / Jaringan / Aplikasi / dll -->
+          <span class="port-tag">Web</span>
+          <span class="port-tag">HTML</span>
+          <span class="port-tag">CSS</span>
+           <span class="port-tag">JS</span>
+          <!-- GANTI JUDUL -->
+          <h3 class="port-title">Web Automotivetech</h3>
+          <!-- GANTI DESKRIPSI -->
+          <p class="port-desc">Projek Web yang berisi mengenai sejarah mobil, mesin, dan teknologi futuristik.
+          </p>
+          <!-- GANTI href -->
+          <a href="https://automotivetechnew.page.gd/" target="_blank" class="port-ext-link">🔗 Lihat Karya →</a>
+        </div>
+      </div>
+
+      <!-- KARYA 2 -->
+      <div class="portfolio-card fade-in">
+        <div class="port-img-wrap">
+          <img src="foto/foto porto2.jpeg" alt="Project 2" class="port-img" />
+          <div class="port-img-fallback">
+            <span class="pixel-text">PROJECT 2</span>
+          </div>
+          <div class="port-overlay">
+            <a href="https://drive.google.com/drive/folders/177qSSZRpQd4s3XzeCd41fFttXzq4xozA" target="_blank" class="port-link-btn pixel-text">LIHAT ▶</a>
+          </div>
+        </div>
+        <div class="port-info">
+          <span class="port-tag">Desain</span>
+          <span class="port-tag">Canva</span>
+          <span class="port-tag">Pinterest</span>
+          <h3 class="port-title">Proyek KIK</h3>
+          <p class="port-desc">projek pembuatan barang custom dengan harapan menjadi bisnis yang menghasilkan uang.</p>
+          <a href="https://drive.google.com/drive/folders/177qSSZRpQd4s3XzeCd41fFttXzq4xozA" target="_blank" class="port-ext-link">🔗 Lihat Karya →</a>
+        </div>
+      </div>
+
+      <!-- KARYA 3 -->
+      <div class="portfolio-card fade-in">
+        <div class="port-img-wrap">
+          <img src="foto/foto porto3.jpeg" alt="Project 3" class="port-img" />
+          <div class="port-img-fallback">
+            <span class="pixel-text">PROJECT 3</span>
+          </div>
+          <div class="port-overlay">
+            <a href="https://drive.google.com/drive/folders/1VxP01s0hjiltMjnnyqCJbg1ed4Jcjc7p" target="_blank" class="port-link-btn pixel-text">LIHAT ▶</a>
+          </div>
+        </div>
+        <div class="port-info">
+          <span class="port-tag">Desain</span>
+          <span class="port-tag">Adobe ilustrator</span>
+          <h3 class="port-title">Projek poster</h3>
+          <p class="port-desc">projek poster yang menggambarkan semangat perjuangan mempertahankan kemerdekaan.</p>
+          <a href="https://drive.google.com/drive/folders/1VxP01s0hjiltMjnnyqCJbg1ed4Jcjc7p" target="_blank" class="port-ext-link">🔗 Lihat Karya →</a>
+        </div>
+      </div>
+
+      <!-- KARYA 4 -->
+      <div class="portfolio-card fade-in">
+        <div class="port-img-wrap">
+          <img src="foto/foto porto4.png" alt="Project 4" class="port-img" />
+          <div class="port-img-fallback">
+            <span class="pixel-text">PROJECT 4</span>
+          </div>
+          <div class="port-overlay">
+            <a href="https://sejarahtugumuda.page.gd/" target="_blank" class="port-link-btn pixel-text">LIHAT ▶</a>
+          </div>
+        </div>
+        <div class="port-info">
+          <span class="port-tag">HTML</span>
+          <span class="port-tag">CSS</span>
+          <span class="port-tag">JS</span>
+          <h3 class="port-title">web sejarah tugu muda kelas 10</h3>
+          <p class="port-desc">web sejarah tugumuda yang dapat memberikan informasi kepada masyarakat.</p>
+          <a href="https://sejarahtugumuda.page.gd/" target="_blank" class="port-ext-link">🔗 Lihat Karya →</a>
+        </div>
+      </div>
+
+      <!-- KARYA 5 -->
+      <div class="portfolio-card fade-in">
+        <div class="port-img-wrap">
+          <img src="foto/foto porto5.png" alt="Project 5" class="port-img" />
+          <div class="port-img-fallback">
+            <span class="pixel-text">PROJECT 5</span>
+          </div>
+          <div class="port-overlay">
+            <a href="https://sway.cloud.microsoft/y7N0xWxqgMgCAncp?ref=Link&loc=play" target="_blank" class="port-link-btn pixel-text">LIHAT ▶</a>
+          </div>
+        </div>
+        <div class="port-info">
+          <span class="port-tag">Web</span>
+          <span class="port-tag">Sway</span>
+          <h3 class="port-title">Sway Sapta Budaya Simpang Lima</h3>
+          <p class="port-desc">sebuah web yang memberikan informasi mengenai budaya jawa.</p>
+          <a href="https://sway.cloud.microsoft/y7N0xWxqgMgCAncp?ref=Link&loc=play" target="_blank" class="port-ext-link">🔗 Lihat Karya →</a>
+        </div>
+      </div>
+
+      <!-- KARYA 6 -->
+      <div class="portfolio-card fade-in">
+        <div class="port-img-wrap">
+          <img src="foto/foto porto6.jpeg" alt="Project 6" class="port-img" />
+          <div class="port-img-fallback">
+            <span class="pixel-text">PROJECT 6</span>
+          </div>
+          <div class="port-overlay">
+            <a href="https://drive.google.com/file/d/1GtNehj7ijmWMR3jMQk8-ArRaskO4CqIQ/view?usp=drivesdk" target="_blank" class="port-link-btn pixel-text">LIHAT ▶</a>
+          </div>
+        </div>
+        <div class="port-info">
+          <span class="port-tag">Sertifikat</span>
+          <span class="port-tag">Cisco Packet Tracert</span>
+          <h3 class="port-title">sertifikat cisco</h3>
+          <p class="port-desc">sertifikat keahlian</p>
+          <a href="https://drive.google.com/file/d/1GtNehj7ijmWMR3jMQk8-ArRaskO4CqIQ/view?usp=drivesdk" target="_blank" class="port-ext-link">🔗 Lihat Karya →</a>
+        </div>
+      </div>
+
+      <!-- KARYA 7 -->
+      <div class="portfolio-card fade-in">
+        <div class="port-img-wrap">
+          <img src="foto/foto porto7.jpeg" alt="Project 7" class="port-img" />
+          <div class="port-img-fallback">
+            <span class="pixel-text">PROJECT 7</span>
+          </div>
+          <div class="port-overlay">
+            <a href="https://drive.google.com/file/d/1D1lxcYUw1LMeSKzuEYy4rbRotns3gnG0/view?usp=drivesdk" target="_blank" class="port-link-btn pixel-text">LIHAT ▶</a>
+          </div>
+        </div>
+        <div class="port-info">
+          <span class="port-tag">Desain</span>
+          <span class="port-tag">Canva</span>
+          <h3 class="port-title">Projek breaf logo</h3>
+          <p class="port-desc">projek custom logo dengan harapan dapat dijadikan bisnis</p>
+          <a href="https://drive.google.com/file/d/1D1lxcYUw1LMeSKzuEYy4rbRotns3gnG0/view?usp=drivesdk" target="_blank" class="port-ext-link">🔗 Lihat Karya →</a>
+        </div>
+      </div>
+
+      <!-- KARYA 8 -->
+      <div class="portfolio-card fade-in">
+        <div class="port-img-wrap">
+          <img src="foto/foto porto8.png" alt="Project 8" class="port-img" />
+          <div class="port-img-fallback">
+            <span class="pixel-text">PROJECT 7</span>
+          </div>
+          <div class="port-overlay">
+            <a href="http://dinamikapadazamanreformasi1.page.gd/" target="_blank" class="port-link-btn pixel-text">LIHAT ▶</a>
+          </div>
+        </div>
+        <div class="port-info">
+          <span class="port-tag">HTML</span>
+          <span class="port-tag">CSS</span>
+          <SPAn class="port-tag">JS</SPAn>
+          <h3 class="port-title">web sejarah </h3>
+          <p class="port-desc">web yang menampilkan sejarah mengenai presiden dalam dinamika politik dan ekonominya.</p>
+          <a href="http://dinamikapadazamanreformasi1.page.gd/" target="_blank" class="port-ext-link">🔗 Lihat Karya →</a>
+        </div>
+      </div>
+
+      <!-- KARYA 9 -->
+      <div class="portfolio-card fade-in">
+        <div class="port-img-wrap">
+          <img src="foto/foto porto9.png" alt="Project 8" class="port-img" />
+          <div class="port-img-fallback">
+            <span class="pixel-text">PROJECT 7</span>
+          </div>
+          <div class="port-overlay">
+            <a href="https://sites.google.com/view/reformasieramegawati/profile" target="_blank" class="port-link-btn pixel-text">LIHAT ▶</a>
+          </div>
+        </div>
+        <div class="port-info">
+          <span class="port-tag">site</span>
+          <span class="port-tag">google</span>
+          <h3 class="port-title">google site sejarah </h3>
+          <p class="port-desc">artikel sejarah mengenai salah satu presiden di Indonesia.</p>
+          <a href="https://sites.google.com/view/reformasieramegawati/profile" target="_blank" class="port-ext-link">🔗 Lihat Karya →</a>
+        </div>
+      </div>
+
+
+
+    </div><!-- /portfolio-grid -->
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+   <p class="pixel-text">© 2026 AFNAN FAUZI PRAKOSO · MADE WITH LOVE & LOTS OF ☕</p>
+    <div class="footer-pellets">
+      <span>·</span><span>·</span><span>·</span><span>·</span><span>·</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

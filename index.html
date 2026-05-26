@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Afnan Fauzi Prakoso — Beranda</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Rajdhani:wght@300;400;500;600;700&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- PAC-MAN CANVAS BACKGROUND -->
+  <canvas id="bgCanvas"></canvas>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-brand">
+      <span class="pac-icon">👾</span>
+      <span class="brand-text">PERSONAL BRANDING</span>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html"     class="nav-link active">HOME</a></li>
+      <li><a href="about.html"     class="nav-link">ABOUT</a></li>
+      <li><a href="skills.html"    class="nav-link">SKILLS</a></li>
+      <li><a href="portfolio.html" class="nav-link">PORTFOLIO</a></li>
+      <li><a href="cv.html"        class="nav-link">CV</a></li>
+    </ul>
+  </nav>
+
+  <!-- ════════ PAGE 1 — HOMEPAGE ════════ -->
+  <main class="page page-home">
+    <div class="home-container">
+
+      <!-- TEXT SIDE -->
+      <div class="home-text">
+        <p class="greeting pixel-text">HELLO, WORLD!</p>
+
+        <h1 class="full-name">
+          <!-- GANTI NAMA LENGKAP -->
+          AFNAN FAUZI PRAKOSO
+          <br/>
+          <span class="nickname">Panggil Aku Afnan</span>
+        </h1>
+
+        <p class="tagline">
+          <!-- GANTI TAGLINE -->
+          Calon Web Developer &nbsp;|&nbsp; Tertarik pada Teknologi, Web Development &amp; IoT
+        </p>
+
+        <p class="bio">
+          <!-- GANTI DESKRIPSI DIRI (2–3 kalimat) -->
+          Saya adalah seorang pelajar yang bersemangat dalam dunia teknologi informasi dan pengembangan web.
+          Saya percaya bahwa setiap baris kode adalah langkah menuju solusi yang bermakna.
+          Saat ini saya terus belajar dan berkembang untuk menjadi profesional yang siap berkontribusi di dunia kerja dan di masyarakat.
+        </p>
+
+        <div class="home-buttons">
+          <a href="portfolio.html" class="btn btn-primary">Lihat Karya</a>
+          <a href="cv.html"        class="btn btn-outline">Lihat CV</a>
+        </div>
+
+        <div class="dots-row">
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+        </div>
+      </div>
+
+      <!-- PHOTO SIDE -->
+      <div class="home-photo">
+        <div class="photo-frame">
+          <div class="photo-inner">
+            <!-- GANTI src DENGAN PATH FOTO KAMU, misal: foto.jpg -->
+            <img src="foto/foto home2.jpeg" alt="Foto Profesional" class="profile-photo" />
+            <div class="photo-fallback">
+              <span>FOTO</span>
+              <span>KAMU</span>
+            </div>
+          </div>
+          <div class="frame-corner tl"></div>
+          <div class="frame-corner tr"></div>
+          <div class="frame-corner bl"></div>
+          <div class="frame-corner br"></div>
+        </div>
+
+        <div class="score-badge">
+          <span class="pixel-text">LEVEL 1</span>
+          <span class="score-val">PLAYER 1</span>
+        </div>
+      </div>
+
+    </div><!-- /home-container -->
+
+    <div class="scroll-hint pixel-text">SCROLL DOWN ▼</div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <p class="pixel-text">© 2026 AFNAN FAUZI PRAKOSO · MADE WITH LOVE & LOTS OF ☕</p>
+    <div class="footer-pellets">
+      <span>·</span><span>·</span><span>·</span><span>·</span><span>·</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
