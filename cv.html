@@ -6,319 +6,164 @@
   <title>Afnan Fauzi Prakoso — Curriculum Vitae</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Rajdhani:wght@300;400;500;600;700&family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&family=Orbitron:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
   <style>
-    /* ═══════════════════════════════════════════
-       CV PROFESSIONAL STYLES
-       Font Inter dipakai khusus di area CV agar
-       tampil bersih & korporat saat dicetak
-    ═══════════════════════════════════════════ */
+    .cv-page-wrap { max-width: 860px; margin: 0 auto; }
+    .cv-actions { display: flex; justify-content: flex-end; gap: 0.8rem; margin-bottom: 1.6rem; }
 
-    /* ── CV Wrapper (tampilan di web) ── */
-    .cv-page-wrap {
-      max-width: 860px;
-      margin: 0 auto;
-    }
-
-    .cv-actions {
-      display: flex;
-      justify-content: flex-end;
-      gap: 0.8rem;
-      margin-bottom: 1.6rem;
-    }
-
-    /* ── CV Sheet (area yang dicetak) ── */
     .cv-sheet {
       display: grid;
       grid-template-columns: 220px 1fr;
       background: #fff;
-      border-radius: 10px;
+      border-radius: 12px;
       overflow: hidden;
-      box-shadow: 0 8px 60px rgba(0,0,0,0.5);
+      box-shadow: 0 8px 40px rgba(0,0,0,0.1);
       font-family: 'Inter', sans-serif;
-      color: #1a1a2e;
+      color: #1e1e2e;
+      border: 1px solid rgba(0,0,0,0.06);
     }
 
-    /* ════════════════
-       SIDEBAR KIRI
-    ════════════════ */
     .cvp-sidebar {
-      background: #1a1a3e;
-      padding: 2.4rem 1.6rem;
-      display: flex;
-      flex-direction: column;
-      gap: 1.8rem;
-    }
-
-    /* Foto */
-    .cvp-photo-box {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 0.8rem;
-    }
-    .cvp-photo {
-      width: 110px;
-      height: 130px;
-      object-fit: cover;
-      object-position: top;
-      border-radius: 6px;
-      border: 3px solid #f5d800;
-      box-shadow: 0 0 16px rgba(245,216,0,0.35);
-      display: block;
-    }
-    .cvp-photo-placeholder {
-      width: 110px;
-      height: 130px;
-      border-radius: 6px;
-      border: 3px solid #f5d800;
-      background: #0d0d2b;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 0.65rem;
-      color: #aaa;
-      letter-spacing: 1px;
-    }
-
-    /* Sidebar section */
-    .cvp-sb-section { display: flex; flex-direction: column; gap: 0.6rem; }
-
-    .cvp-sb-title {
-      font-family: 'Inter', sans-serif;
-      font-size: 0.6rem;
-      font-weight: 700;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-      color: #f5d800;
-      padding-bottom: 0.4rem;
-      border-bottom: 1px solid rgba(245,216,0,0.25);
-      margin-bottom: 0.3rem;
-    }
-
-    /* Kontak list */
-    .cvp-contact { list-style: none; display: flex; flex-direction: column; gap: 0.55rem; }
-    .cvp-contact li {
-      display: flex;
-      align-items: flex-start;
-      gap: 0.5rem;
-      font-size: 0.72rem;
-      color: #c8c8e0;
-      line-height: 1.5;
-      word-break: break-all;
-    }
-    .cvp-ci { font-size: 0.85rem; flex-shrink: 0; margin-top: 0.05rem; }
-
-    /* Skill list dengan deskripsi */
-    .cvp-skill-rows { display: flex; flex-direction: column; gap: 0.75rem; }
-    .cvp-skill-row  { display: flex; flex-direction: column; gap: 0.18rem; }
-    .cvp-skill-name {
-      font-size: 0.72rem;
-      font-weight: 700;
-      color: #f0f0ff;
-      line-height: 1.3;
-    }
-    .cvp-skill-desc {
-      font-size: 0.66rem;
-      color: #f5d4d4;
-      line-height: 1.5;
-    }
-
-    /* Quote box */
-    .cvp-quote {
-      margin-top: auto;
-      padding: 0.9rem 1rem;
-      border-left: 3px solid #f5d800;
-      font-size: 0.72rem;
-      font-style: italic;
-      color: #aaa;
-      line-height: 1.7;
-    }
-
-    /* ════════════════
-       KONTEN UTAMA
-    ════════════════ */
-    .cvp-main {
-      background: #fff;
-      padding: 2.2rem 2.4rem 2rem;
+      background: linear-gradient(180deg, #1a1a2e 0%, #252542 100%);
+      padding: 2.2rem 1.5rem;
       display: flex;
       flex-direction: column;
       gap: 1.6rem;
     }
 
-    /* Header nama */
-    .cvp-header {
-      border-bottom: 2px solid #1a1a3e;
-      padding-bottom: 1.1rem;
+    .cvp-photo-box { display: flex; flex-direction: column; align-items: center; gap: 0.7rem; }
+    .cvp-photo {
+      width: 105px; height: 125px;
+      object-fit: cover; object-position: top;
+      border-radius: 8px;
+      border: 2px solid rgba(184,134,11,0.3);
     }
-    .cvp-name {
-      font-family: 'Playfair Display', serif;
-      font-size: 2rem;
-      font-weight: 700;
-      color: #1a1a3e;
-      letter-spacing: 1px;
-      line-height: 1.1;
+    .cvp-photo-placeholder {
+      width: 105px; height: 125px;
+      border-radius: 8px;
+      border: 2px solid rgba(184,134,11,0.3);
+      background: #1e1e32;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 0.62rem; color: #8a8a9e; letter-spacing: 1px;
+    }
+
+    .cvp-sb-section { display: flex; flex-direction: column; gap: 0.5rem; }
+    .cvp-sb-title {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.58rem; font-weight: 700;
+      letter-spacing: 3px; text-transform: uppercase;
+      color: #d4a843;
+      padding-bottom: 0.35rem;
+      border-bottom: 1px solid rgba(184,134,11,0.2);
       margin-bottom: 0.25rem;
     }
+
+    .cvp-contact { list-style: none; display: flex; flex-direction: column; gap: 0.5rem; }
+    .cvp-contact li {
+      display: flex; align-items: flex-start; gap: 0.45rem;
+      font-size: 0.7rem; color: #b0b0c4;
+      line-height: 1.5; word-break: break-all;
+    }
+    .cvp-ci { font-size: 0.8rem; flex-shrink: 0; margin-top: 0.05rem; }
+
+    .cvp-skill-rows { display: flex; flex-direction: column; gap: 0.65rem; }
+    .cvp-skill-row { display: flex; flex-direction: column; gap: 0.15rem; }
+    .cvp-skill-name { font-size: 0.7rem; font-weight: 700; color: #e8e8f0; line-height: 1.3; }
+    .cvp-skill-desc { font-size: 0.64rem; color: #b0b0c4; line-height: 1.5; }
+
+    .cvp-quote {
+      margin-top: auto; padding: 0.85rem 0.9rem;
+      border-left: 3px solid #d4a843;
+      font-size: 0.7rem; font-style: italic;
+      color: #8a8a9e; line-height: 1.7;
+    }
+
+    .cvp-main {
+      background: #fff;
+      padding: 2rem 2.2rem 1.8rem;
+      display: flex; flex-direction: column; gap: 1.4rem;
+    }
+
+    .cvp-header { border-bottom: 2px solid #1a1a2e; padding-bottom: 1rem; }
+    .cvp-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.9rem; font-weight: 700;
+      color: #1a1a2e; letter-spacing: 1px;
+      line-height: 1.1; margin-bottom: 0.2rem;
+    }
     .cvp-role {
-      font-size: 0.78rem;
-      font-weight: 600;
-      letter-spacing: 2.5px;
-      text-transform: uppercase;
-      color: #f5a800;
+      font-size: 0.75rem; font-weight: 600;
+      letter-spacing: 2.5px; text-transform: uppercase;
+      color: #b8860b;
     }
 
-    /* Section di main */
-    .cvp-section { display: flex; flex-direction: column; gap: 0.6rem; }
+    .cvp-section { display: flex; flex-direction: column; gap: 0.5rem; }
     .cvp-sec-title {
-      font-size: 0.58rem;
-      font-weight: 700;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-      color: #1a1a3e;
-      padding-bottom: 0.35rem;
-      border-bottom: 1.5px solid #1a1a3e;
+      font-size: 0.56rem; font-weight: 700;
+      letter-spacing: 3px; text-transform: uppercase;
+      color: #1a1a2e;
+      padding-bottom: 0.3rem;
+      border-bottom: 1.5px solid #1a1a2e;
     }
 
-    /* Profil teks */
-    .cvp-bio {
-      font-size: 0.82rem;
-      color: #333;
-      line-height: 1.75;
-    }
+    .cvp-bio { font-size: 0.8rem; color: #52526a; line-height: 1.75; }
 
-    /* Data pribadi table */
-    .cvp-data-table {
-      width: 100%;
-      border-collapse: collapse;
-      font-size: 0.8rem;
-    }
-    .cvp-data-table tr td {
-      padding: 0.28rem 0.5rem;
-      color: #333;
-      vertical-align: top;
-    }
+    .cvp-data-table { width: 100%; border-collapse: collapse; font-size: 0.78rem; }
+    .cvp-data-table tr td { padding: 0.25rem 0.45rem; color: #52526a; vertical-align: top; }
     .cvp-data-table tr td:first-child {
-      font-weight: 600;
-      color: #1a1a3e;
-      white-space: nowrap;
-      width: 42%;
+      font-weight: 600; color: #1a1a2e;
+      white-space: nowrap; width: 42%;
     }
-    .cvp-data-table tr:nth-child(even) td { background: #f7f7fc; }
+    .cvp-data-table tr:nth-child(even) td { background: #f8f7f4; }
 
-    /* Timeline */
-    .cvp-timeline { display: flex; flex-direction: column; gap: 0.9rem; }
+    .cvp-timeline { display: flex; flex-direction: column; gap: 1rem; }
     .cvp-tl-item {
-      display: grid;
-      grid-template-columns: 110px 1fr;
-      gap: 0.8rem;
-      position: relative;
-      padding-left: 0.5rem;
+      display: grid; grid-template-columns: 105px 1fr;
+      gap: 1.9rem; position: relative; padding-left: 0.5rem;
     }
     .cvp-tl-item::before {
-      content: '';
-      position: absolute;
-      left: 103px;
-      top: 6px;
-      bottom: -0.9rem;
-      width: 1px;
-      background: #e0e0f0;
+      content: ''; position: absolute;
+      left: 108px; top: 8px; bottom: -1rem;
+      width: 1px; background: #e0dfd8;
     }
     .cvp-tl-item:last-child::before { display: none; }
     .cvp-tl-left { display: flex; flex-direction: column; align-items: flex-end; gap: 2px; padding-right: 0.8rem; }
-    .cvp-tl-year {
-      font-size: 0.65rem;
-      font-weight: 700;
-      color: #1a1a3e;
-      text-align: right;
-      line-height: 1.3;
-    }
+    .cvp-tl-year { font-size: 0.63rem; font-weight: 700; color: #1a1a2e; text-align: right; line-height: 1.4; }
     .cvp-tl-dot {
-      position: absolute;
-      left: 100px;
-      top: 5px;
-      width: 8px; height: 8px;
-      border-radius: 50%;
-      background: #f5d800;
-      border: 1.5px solid #1a1a3e;
+      position: absolute; left: 104px; top: 6px;
+      width: 7px; height: 7px; border-radius: 50%;
+      background: #b8860b; border: 1.5px solid #1a1a2e;
       flex-shrink: 0;
     }
-    .cvp-tl-right { display: flex; flex-direction: column; gap: 0.15rem; padding-left: 0.6rem; }
-    .cvp-tl-inst {
-      font-size: 0.82rem;
-      font-weight: 700;
-      color: #1a1a3e;
-      line-height: 1.3;
-    }
-    .cvp-tl-sub {
-      font-size: 0.74rem;
-      color: #555;
-      line-height: 1.4;
-    }
-    .cvp-tl-desc {
-      font-size: 0.72rem;
-      color: #777;
-      line-height: 1.5;
-      margin-top: 0.1rem;
-    }
+    .cvp-tl-right { display: flex; flex-direction: column; gap: 0.15rem; padding-left: 0.65rem; }
+    .cvp-tl-inst { font-size: 0.8rem; font-weight: 700; color: #1a1a2e; line-height: 1.35; }
+    .cvp-tl-sub { font-size: 0.72rem; color: #52526a; line-height: 1.45; }
+    .cvp-tl-desc { font-size: 0.7rem; color: #8a8a9e; line-height: 1.5; margin-top: 0.15rem; }
 
-    /* Tanda tangan */
-    .cvp-sign {
-      display: flex;
-      justify-content: flex-end;
-      padding-top: 0.5rem;
-    }
-    .cvp-sign-block {
-      text-align: center;
-      font-size: 0.78rem;
-      color: #333;
-    }
-    .cvp-sign-space { height: 56px; }
-    .cvp-sign-name  { font-weight: 700; color: #1a1a3e; }
+    .cvp-sign { display: flex; justify-content: flex-end; padding-top: 0.4rem; }
+    .cvp-sign-block { text-align: center; font-size: 0.76rem; color: #52526a; }
+    .cvp-sign-space { height: 52px; }
+    .cvp-sign-name { font-weight: 700; color: #1a1a2e; }
 
-    /* ═══════════════════
-       PRINT STYLES
-    ═══════════════════ */
     @media print {
-      /* Sembunyikan semua elemen website */
-      #bgCanvas,
-      .navbar,
-      .page > .section-header,
-      .cv-actions,
-      .site-footer    { display: none !important; }
-
-      body            { background: #fff !important; }
-      .page           { padding: 0 !important; margin: 0 !important; }
-      .cv-page-wrap   { max-width: 100% !important; }
-
-      .cv-sheet {
-        box-shadow : none !important;
-        border-radius: 0 !important;
-        width: 100% !important;
-      }
-
-      /* Paksa grid tetap 2 kolom saat cetak */
-      .cv-sheet { display: grid !important; grid-template-columns: 200px 1fr !important; }
-
-      /* Sidebar warna tidak hilang */
+      #bgCanvas, .navbar, .page > .section-header, .cv-actions, .site-footer { display: none !important; }
+      body { background: #fff !important; }
+      .page { padding: 0 !important; margin: 0 !important; }
+      .cv-page-wrap { max-width: 100% !important; }
+      .cv-sheet { box-shadow: none !important; border-radius: 0 !important; width: 100% !important; display: grid !important; grid-template-columns: 200px 1fr !important; }
       .cvp-sidebar { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
-
-      /* Pastikan tidak ada break aneh */
       .cvp-tl-item, .cvp-section { page-break-inside: avoid; }
     }
 
-    /* ═══════════════════
-       RESPONSIVE
-    ═══════════════════ */
     @media (max-width: 700px) {
       .cv-sheet { grid-template-columns: 1fr; }
-      .cvp-sidebar { padding: 1.8rem 1.4rem; }
-      .cvp-main   { padding: 1.6rem 1.2rem; }
-      .cvp-name   { font-size: 1.55rem; }
-      .cvp-tl-item { grid-template-columns: 80px 1fr; }
-      .cvp-tl-item::before { left: 73px; }
-      .cvp-tl-dot  { left: 70px; }
+      .cvp-sidebar { padding: 1.6rem 1.3rem; }
+      .cvp-main { padding: 1.4rem 1.1rem; }
+      .cvp-name { font-size: 1.5rem; }
+      .cvp-tl-item { grid-template-columns: 75px 1fr; }
+      .cvp-tl-item::before { left: 68px; }
+      .cvp-tl-dot { left: 65px; }
     }
   </style>
 </head>
@@ -326,335 +171,235 @@
 
   <canvas id="bgCanvas"></canvas>
 
-  <!-- NAVBAR (tetap arcade style) -->
   <nav class="navbar" id="navbar">
     <div class="nav-brand">
-      <span class="pac-icon">👾</span>
-      <span class="brand-text">PERSONAL BRANDING</span>
+      <div class="nav-brand-icon">A</div>
+      <span class="brand-text">AFNAN PORTFOLIO</span>
     </div>
     <button class="hamburger" id="hamburger" aria-label="Menu">
       <span></span><span></span><span></span>
     </button>
     <ul class="nav-links" id="navLinks">
-      <li><a href="index.html"     class="nav-link">HOME</a></li>
-      <li><a href="about.html"     class="nav-link">ABOUT</a></li>
-      <li><a href="skills.html"    class="nav-link">SKILLS</a></li>
-      <li><a href="portfolio.html" class="nav-link">PORTFOLIO</a></li>
-      <li><a href="cv.html"        class="nav-link active">CV</a></li>
+      <li><a href="index.html" class="nav-link">Home</a></li>
+      <li><a href="about.html" class="nav-link">About</a></li>
+      <li><a href="skills.html" class="nav-link">Skills</a></li>
+      <li><a href="portfolio.html" class="nav-link">Portfolio</a></li>
+      <li><a href="cv.html" class="nav-link active">CV</a></li>
     </ul>
   </nav>
 
-  <!-- ════════ PAGE 5 — CURRICULUM VITAE ════════ -->
   <main class="page">
-
     <div class="section-header">
-      <span class="section-number pixel-text">05</span>
+      <span class="section-number">05</span>
       <h2 class="section-title">CURRICULUM VITAE</h2>
       <span class="section-line"></span>
     </div>
 
     <div class="cv-page-wrap">
-
-      <!-- Tombol cetak -->
       <div class="cv-actions">
-        <button class="btn btn-primary" onclick="window.print()">🖨️ Cetak / Simpan PDF</button>
+        <button class="btn btn-primary" onclick="window.print()">Cetak / Simpan PDF</button>
       </div>
 
-      <!-- ═══════════════ CV SHEET ═══════════════ -->
       <div class="cv-sheet" id="cvPrint">
-
-        <!-- ── SIDEBAR ── -->
         <aside class="cvp-sidebar">
-
-          <!-- Foto -->
           <div class="cvp-photo-box">
-            <!-- GANTI src DENGAN FILE FOTO KAMU -->
             <img src="foto/foto cv.jpeg" alt="Foto CV" class="cvp-photo" />
             <div class="cvp-photo-placeholder" style="display:none">FOTO</div>
           </div>
 
-          <!-- Kontak -->
           <div class="cvp-sb-section">
             <p class="cvp-sb-title">Kontak</p>
             <ul class="cvp-contact">
-              <!-- GANTI SEMUA DATA KONTAK -->
-              <li><span class="cvp-ci">📍</span> Kota Semarang, Provinsi Jawa Tengah</li>
+              <li><span class="cvp-ci">📍</span> Kota Semarang, <br> Jawa Tengah</li>
               <li><span class="cvp-ci">📞</span> +62895621105005</li>
               <li><span class="cvp-ci">✉️</span> afnanfauzi57@gmail.com</li>
-              <li><span class="cvp-ci">🌐</span> [website / portfolio]</li>
+              <li><span class="cvp-ci">🌐</span> </li>
             </ul>
           </div>
 
-          <!-- Keahlian dengan deskripsi -->
           <div class="cvp-sb-section">
             <p class="cvp-sb-title">Keahlian</p>
             <div class="cvp-skill-rows">
-
-              <!-- GANTI / TAMBAH SKILL SESUAI KEMAMPUANMU -->
-
               <div class="cvp-skill-row">
                 <span class="cvp-skill-name">HTML</span>
-                <span class="cvp-skill-desc">Mampu membuat struktur halaman web yang semantik dan terorganisir dengan baik.</span>
+                <span class="cvp-skill-desc">Mampu membuat struktur halaman web yang semantik dan terorganisir.</span>
               </div>
-
               <div class="cvp-skill-row">
                 <span class="cvp-skill-name">CSS Dasar</span>
-                <span class="cvp-skill-desc">Mampu menerapkan styling, layout responsif, dan animasi sederhana pada halaman web.</span>
+                <span class="cvp-skill-desc">Menerapkan styling, layout responsif, dan animasi sederhana.</span>
               </div>
-
               <div class="cvp-skill-row">
                 <span class="cvp-skill-name">JavaScript Dasar</span>
-                <span class="cvp-skill-desc">Memahami logika pemrograman dasar, manipulasi DOM, dan interaksi pengguna.</span>
+                <span class="cvp-skill-desc">Logika pemrograman dasar, manipulasi DOM, dan interaksi pengguna.</span>
               </div>
-
               <div class="cvp-skill-row">
                 <span class="cvp-skill-name">Cisco Packet Tracer</span>
-                <span class="cvp-skill-desc">Mampu merancang dan mensimulasikan topologi jaringan komputer sederhana.</span>
+                <span class="cvp-skill-desc">Merancang dan mensimulasikan topologi jaringan komputer.</span>
               </div>
-
               <div class="cvp-skill-row">
                 <span class="cvp-skill-name">Desain Grafis (Canva)</span>
-                <span class="cvp-skill-desc">Mampu membuat konten visual, poster, dan materi presentasi yang menarik.</span>
+                <span class="cvp-skill-desc">Membuat konten visual, poster, dan materi presentasi.</span>
               </div>
-
             </div>
           </div>
 
-          <!-- Bahasa -->
           <div class="cvp-sb-section">
             <p class="cvp-sb-title">Bahasa</p>
             <div class="cvp-skill-rows">
-              <!-- GANTI SESUAI KEMAMPUAN -->
               <div class="cvp-skill-row">
                 <span class="cvp-skill-name">Bahasa Indonesia</span>
                 <span class="cvp-skill-desc">Fasih — bahasa ibu, lisan dan tulisan.</span>
               </div>
               <div class="cvp-skill-row">
                 <span class="cvp-skill-name">Bahasa Inggris</span>
-                <span class="cvp-skill-desc">Pasif — mampu membaca dokumentasi teknis dan berkomunikasi dasar.</span>
+                <span class="cvp-skill-desc">Pasif — mampu membaca dokumentasi teknis.</span>
               </div>
             </div>
           </div>
 
-          <!-- Quote -->
-          <div class="cvp-quote">
-            <!-- GANTI QUOTE -->
-            "Kode yang baik adalah cerminan dari pikiran yang jernih dan niat yang tulus."
-          </div>
+          <div class="cvp-quote">"Kode yang baik adalah cerminan dari pikiran yang jernih."</div>
+        </aside>
 
-        </aside><!-- /sidebar -->
-
-        <!-- ── KONTEN UTAMA ── -->
         <main class="cvp-main">
-
-          <!-- Nama & Posisi -->
           <header class="cvp-header">
-            <!-- GANTI NAMA & POSISI YANG DILAMAR -->
             <h1 class="cvp-name">AFNAN FAUZI PRAKOSO</h1>
             <p class="cvp-role">Calon Web Developer &amp; IT Enthusiast</p>
           </header>
 
-          <!-- Profil Singkat -->
           <section class="cvp-section">
             <h2 class="cvp-sec-title">Profil Singkat</h2>
             <p class="cvp-bio">
-              <!-- GANTI PROFIL SINGKAT (3-4 kalimat, formal & profesional) -->
-              Saya adalah pelajar SMK jurusan SIJA (Sistem Informasi Jaringan dan Aplikasi) yang memiliki ketertarikan mendalam di bidang pengembangan web dan teknologi jaringan komputer. Saya terbiasa bekerja secara mandiri maupun dalam tim dengan menjunjung tinggi kedisiplinan dan tanggung jawab. Dengan kemampuan teknis dan kreativitas yang terus diasah, saya siap memberikan kontribusi nyata bagi kemajuan perusahaan yang saya masuki.
+              Saya adalah pelajar SMK jurusan SIJA yang memiliki ketertarikan mendalam di bidang pengembangan web dan teknologi jaringan komputer. Saya terbiasa bekerja secara mandiri maupun dalam tim dengan menjunjung tinggi kedisiplinan dan tanggung jawab. Dengan kemampuan teknis dan kreativitas yang terus diasah, saya siap memberikan kontribusi nyata bagi kemajuan perusahaan.
             </p>
           </section>
 
-          <!-- Data Pribadi -->
           <section class="cvp-section">
             <h2 class="cvp-sec-title">Data Pribadi</h2>
             <table class="cvp-data-table">
-              <tr>
-                <td>Nama Lengkap</td>
-                <td>: Afnan Fauzi Prakoso</td>
-              </tr>
-              <tr>
-                <td>Tempat, Tgl. Lahir</td>
-                <td>: Kota Semarang, 09 Agustus 2008</td>
-              </tr>
-              <tr>
-                <td>Jenis Kelamin</td>
-                <td>: Laki-laki</td>
-              </tr>
-              <tr>
-                <td>Agama</td>
-                <td>: Islam</td>
-              </tr>
-              <tr>
-                <td>Status</td>
-                <td>: Belum Menikah</td>
-              </tr>
-              <tr>
-                <td>Kewarganegaraan</td>
-                <td>: Indonesia</td>
-              </tr>
-              <tr>
-                <td>Alamat</td>
-                <td>: Jalan Tanjung sari VIII, RT 001 / RW 002, Kelurahan Sumurboto, Kecamatan Banyumanik, Kota Semarang</td>
-              </tr>
+              <tr><td>Nama Lengkap</td><td>: Afnan Fauzi Prakoso</td></tr>
+              <tr><td>Tempat, Tgl. Lahir</td><td>: Kota Semarang, 09 Agustus 2008</td></tr>
+              <tr><td>Jenis Kelamin</td><td>: Laki-laki</td></tr>
+              <tr><td>Agama</td><td>: Islam</td></tr>
+              <tr><td>Status</td><td>: Belum Menikah</td></tr>
+              <tr><td>Kewarganegaraan</td><td>: Indonesia</td></tr>
+              <tr><td>Alamat</td><td>: Jl. Tanjung Sari VIII, RT 001/RW 002, Kel. Sumurboto, Kec. Banyumanik, Kota Semarang</td></tr>
             </table>
           </section>
 
-          <!-- Riwayat Pendidikan -->
           <section class="cvp-section">
             <h2 class="cvp-sec-title">Riwayat Pendidikan</h2>
             <div class="cvp-timeline">
-
               <div class="cvp-tl-item">
-                <div class="cvp-tl-left">
-                  <!-- GANTI TAHUN -->
-                  <span class="cvp-tl-year">2024 –<br/>Sekarang</span>
-                </div>
+                <div class="cvp-tl-left"><span class="cvp-tl-year">2024 –<br/>Sekarang</span></div>
                 <div class="cvp-tl-dot"></div>
                 <div class="cvp-tl-right">
-                  <!-- GANTI NAMA SEKOLAH & JURUSAN -->
                   <span class="cvp-tl-inst">SMK Negeri 7</span>
                   <span class="cvp-tl-sub">Jurusan SIJA — Kota Semarang</span>
                 </div>
               </div>
-
               <div class="cvp-tl-item">
-                <div class="cvp-tl-left">
-                  <span class="cvp-tl-year">2021 –<br/>2024</span>
-                </div>
+                <div class="cvp-tl-left"><span class="cvp-tl-year">2021 –<br/>2024</span></div>
                 <div class="cvp-tl-dot"></div>
                 <div class="cvp-tl-right">
                   <span class="cvp-tl-inst">SMP Negeri 27</span>
                   <span class="cvp-tl-sub">Kota Semarang</span>
                 </div>
               </div>
-
               <div class="cvp-tl-item">
-                <div class="cvp-tl-left">
-                  <span class="cvp-tl-year">2015 –<br/>2021</span>
-                </div>
+                <div class="cvp-tl-left"><span class="cvp-tl-year">2015 –<br/>2021</span></div>
                 <div class="cvp-tl-dot"></div>
                 <div class="cvp-tl-right">
                   <span class="cvp-tl-inst">SD Negeri Sumurboto</span>
                   <span class="cvp-tl-sub">Kota Semarang</span>
                 </div>
               </div>
-
-               <div class="cvp-tl-item">
-                <div class="cvp-tl-left">
-                  <span class="cvp-tl-year">2013 –<br/>2015</span>
-                </div>
+              <div class="cvp-tl-item">
+                <div class="cvp-tl-left"><span class="cvp-tl-year">2013 –<br/>2015</span></div>
                 <div class="cvp-tl-dot"></div>
                 <div class="cvp-tl-right">
                   <span class="cvp-tl-inst">TK PGRI 33 Sumurboto</span>
                   <span class="cvp-tl-sub">Kota Semarang</span>
                 </div>
               </div>
-
             </div>
           </section>
 
-          <!-- Pengalaman / Organisasi / PKL / Lomba -->
           <section class="cvp-section">
             <h2 class="cvp-sec-title">Pengalaman &amp; Organisasi</h2>
             <div class="cvp-timeline">
-
-              <!--
-                SALIN BLOK cvp-tl-item INI UNTUK MENAMBAH PENGALAMAN
-                Isi: PKL, lomba, organisasi, kepanitiaan, sertifikasi, dll.
-              -->
-
               <div class="cvp-tl-item">
-                <div class="cvp-tl-left">
-                  <span class="cvp-tl-year">2025</span>
-                </div>
+                <div class="cvp-tl-left"><span class="cvp-tl-year">2026</span></div>
                 <div class="cvp-tl-dot"></div>
                 <div class="cvp-tl-right">
-                  <!-- GANTI NAMA KEGIATAN -->
-                  <span class="cvp-tl-inst">Anggota Komisi A </span>
-                  <span class="cvp-tl-sub">ORGANISASI MPK SMK NEGERI 7 — KOTA SEMARANG</span>
-                  <!-- GANTI DESKRIPSI SINGKAT -->
-                  <span class="cvp-tl-desc">Dalam Komisi A ini, saya bertanggung jawab mengenai perubahan aturan-aturan yang ada pada SMK Negeri 7 Semarang. Jadi aturan-aturan yang tidak relevan harus di revisi dan di sesuaikan dengan zaman yang ada</span>
+                  <span class="cvp-tl-inst">Juara 2 Hackathon DIGIForward 2026</span>
+                  <span class="cvp-tl-sub">DIGIFORWARD </span>
+                  <span class="cvp-tl-desc">Lomba pengembangan solusi berbasis software dengan Cognitive Architecture dan AI.</span>
                 </div>
               </div>
-
               <div class="cvp-tl-item">
-                <div class="cvp-tl-left">
-                  <span class="cvp-tl-year">2023</span>
-                </div>
+                <div class="cvp-tl-left"><span class="cvp-tl-year">2025</span></div>
                 <div class="cvp-tl-dot"></div>
                 <div class="cvp-tl-right">
-                  <span class="cvp-tl-inst">Perlombaan Festival Tunas Bahasa Ibu tingkat Kota Semarang</span>
-                  <span class="cvp-tl-sub">SMP NEGERI 33 — Kota Semarang</span>
-                  <span class="cvp-tl-desc">Mengikuti lomba menulis dan membaca aksara jawa</span>
+                  <span class="cvp-tl-inst">Anggota Komisi A</span>
+                  <span class="cvp-tl-sub">MPK SMK Negeri 7 — Kota Semarang</span>
+                  <span class="cvp-tl-desc">Bertanggung jawab merevisi dan menyesuaikan aturan sekolah dengan perkembangan zaman.</span>
                 </div>
               </div>
-
-               <div class="cvp-tl-item">
-                <div class="cvp-tl-left">
-                  <span class="cvp-tl-year">2019</span>
-                </div>
+              <div class="cvp-tl-item">
+                <div class="cvp-tl-left"><span class="cvp-tl-year">2023</span></div>
                 <div class="cvp-tl-dot"></div>
                 <div class="cvp-tl-right">
-                  <span class="cvp-tl-inst">Lomba MAPSI Tingkat Kota Semarang</span>
+                  <span class="cvp-tl-inst">Festival Tunas Bahasa Ibu</span>
+                  <span class="cvp-tl-sub">SMP Negeri 33 — Kota Semarang</span>
+                  <span class="cvp-tl-desc">Lomba menulis dan membaca aksara Jawa tingkat kota.</span>
+                </div>
+              </div>
+              <div class="cvp-tl-item">
+                <div class="cvp-tl-left"><span class="cvp-tl-year">2019</span></div>
+                <div class="cvp-tl-dot"></div>
+                <div class="cvp-tl-right">
+                  <span class="cvp-tl-inst">Lomba MAPSI</span>
                   <span class="cvp-tl-sub">Dinas Pendidikan — Kota Semarang</span>
-                  <span class="cvp-tl-desc">mengetik ayat Al-Qur'an melalui Laptop</span>
+                  <span class="cvp-tl-desc">Mengetik ayat Al-Qur'an melalui laptop.</span>
                 </div>
               </div>
-
-              <!-- TAMBAH PENGALAMAN LAIN DI SINI -->
-
             </div>
           </section>
 
-          <!-- Pengalaman Magang (PKL) -->
           <section class="cvp-section">
             <h2 class="cvp-sec-title">Pengalaman Magang (PKL)</h2>
             <div class="cvp-timeline">
-
-              <!-- Placeholder — isi setelah PKL/magang dilaksanakan -->
               <div class="cvp-tl-item">
-                <div class="cvp-tl-left">
-                  <span class="cvp-tl-year">—</span>
-                </div>
+                <div class="cvp-tl-left"><span class="cvp-tl-year">—</span></div>
                 <div class="cvp-tl-dot"></div>
                 <div class="cvp-tl-right">
-                  <span class="cvp-tl-inst" style="color:#9898c0;font-style:italic;">[Belum ada pengalaman magang]</span>
-                  <span class="cvp-tl-sub" style="color:#6868a0;">Akan diperbarui setelah pelaksanaan PKL</span>
-                  <span class="cvp-tl-desc" style="color:#5858a0;">Ganti bagian ini dengan: nama perusahaan, periode magang, posisi/divisi, dan deskripsi singkat pekerjaan yang dilakukan.</span>
+                  <span class="cvp-tl-inst" style="color:#8a8a9e;font-style:italic;">[Belum ada pengalaman magang]</span>
+                  <span class="cvp-tl-sub" style="color:#a0a0b4;">Akan diperbarui setelah pelaksanaan PKL</span>
                 </div>
               </div>
-
             </div>
           </section>
 
-          <!-- Tanda Tangan -->
           <div class="cvp-sign">
             <div class="cvp-sign-block">
-              <!-- GANTI KOTA DAN TANGGAL -->
-              <p>Kota Semarang, 07 Mei 2026</p>
+              <p>Kota Semarang, 14 September 2026</p>
               <p>Yang Menyatakan,</p>
               <div class="cvp-sign-space"></div>
-              <!-- GANTI NAMA -->
               <p class="cvp-sign-name">( Afnan Fauzi Prakoso )</p>
             </div>
           </div>
-
-        </main><!-- /cvp-main -->
-      </div><!-- /cv-sheet -->
-    </div><!-- /cv-page-wrap -->
-
+        </main>
+      </div>
+    </div>
   </main>
 
-  <!-- FOOTER -->
   <footer class="site-footer">
-    <p class="pixel-text">© 2026 AFNAN FAUZI PRAKOSO · MADE WITH LOVE & LOTS OF ☕</p>
-    <div class="footer-pellets">
-      <span>·</span><span>·</span><span>·</span><span>·</span><span>·</span>
-    </div>
+    <p class="pixel-text">© 2026 AFNAN FAUZI PRAKOSO · MADE WITH PASSION</p>
+    <div class="footer-divider"></div>
   </footer>
 
   <script src="script.js"></script>
   <script>
-    /* Sembunyikan foto placeholder jika foto asli gagal load */
     document.querySelectorAll('.cvp-photo').forEach(img => {
       img.addEventListener('error', () => {
         img.style.display = 'none';
