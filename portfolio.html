@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Afnan Fauzi Prakoso — Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&family=Orbitron:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <script>
+    (function () {
+      var t = null;
+      try { t = localStorage.getItem('theme'); } catch (e) {}
+      if (t !== 'light' && t !== 'dark') {
+        t = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      }
+      document.documentElement.setAttribute('data-theme', t);
+    })();
+  </script>
+</head>
+<body>
+
+  <canvas id="bgCanvas"></canvas>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">  
+    <div class="nav-brand">
+      <div class="nav-brand-icon">A</div>
+      <span class="brand-text">AFNAN PORTFOLIO</span>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html"     class="nav-link">Home</a></li>
+      <li><a href="about.html"     class="nav-link">About</a></li>
+      <li><a href="skills.html"    class="nav-link">Skills</a></li>
+      <li><a href="portfolio.html" class="nav-link active">Portfolio</a></li>
+      <li><a href="cv.html"        class="nav-link">CV</a></li>
+    </ul>
+    <button class="theme-toggle" id="themeToggle" aria-label="Ganti tema terang/gelap" title="Ganti tema">
+      <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+      <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+    </button>
+  </nav>
+
+  <!-- PAGE 4 — PORTFOLIO -->
+  <main class="page">
+
+    <div class="section-header">
+      <span class="section-number">04</span>
+      <h2 class="section-title">PORTFOLIO</h2>
+      <span class="section-line"></span>
+    </div>
+
+    <!-- GROUP: PROJECT -->
+    <div class="section-header" style="margin-top: 3rem;">
+      <span class="section-number">01</span>
+      <h2 class="section-title" style="font-size: clamp(1rem, 2.2vw, 1.4rem); color: var(--gold);">PROYEK</h2>
+      <span class="section-line"></span>
+    </div>
+
+    <div class="portfolio-grid">
+
+      <!-- KARYA 01 -->
+      <div class="portfolio-card fade-in">
+        <div class="port-img-wrap">
+          <img src="foto/foto porto01.jpeg" alt="Project 01" class="port-img" />
+          <div class="port-img-fallback">
+            <span>PROJECT 01</span>
+          </div>
+          <div class="port-overlay">
+            <a href="https://drive.google.com/drive/folders/177qSSZRpQd4s3XzeCd41fFttXzq4xozA" target="_blank" class="port-link-btn">LIHAT</a>
+          </div>
+        </div>
+        <div class="port-info">
+          <span class="port-tag">Desain</span>
+          <span class="port-tag">Canva</span>
+          <span class="port-tag">Pinterest</span>
+          <h3 class="port-title">Proyek KIK</h3>
+          <p class="port-desc">Projek pembuatan barang custom dengan harapan menjadi bisnis yang menghasilkan.</p>
+          <a href="https://drive.google.com/drive/folders/177qSSZRpQd4s3XzeCd41fFttXzq4xozA" target="_blank" class="port-ext-link">Lihat Karya →</a>
+        </div>
+      </div>
+
+      <!-- KARYA 02 -->
+      <div class="portfolio-card fade-in">
+        <div class="port-img-wrap">
+          <img src="foto/foto porto02.jpeg" alt="Project 02" class="port-img" />
+          <div class="port-img-fallback">
+            <span>PROJECT 02</span>
+          </div>
+          <div class="port-overlay">
+            <a href="https://drive.google.com/drive/folders/1VxP01s0hjiltMjnnyqCJbg1ed4Jcjc7p" target="_blank" class="port-link-btn">LIHAT</a>
+          </div>
+        </div>
+        <div class="port-info">
+          <span class="port-tag">Desain</span>
+          <span class="port-tag">Adobe Illustrator</span>
+          <h3 class="port-title">Projek Poster</h3>
+          <p class="port-desc">Projek poster yang menggambarkan semangat perjuangan mempertahankan kemerdekaan.</p>
+          <a href="https://drive.google.com/drive/folders/1VxP01s0hjiltMjnnyqCJbg1ed4Jcjc7p" target="_blank" class="port-ext-link">Lihat Karya →</a>
+        </div>
+      </div>
+
+      <!-- KARYA 03 -->
+      <div class="portfolio-card fade-in">
+        <div class="port-img-wrap">
+          <img src="foto/foto porto03.jpeg" alt="Project 03" class="port-img" />
+          <div class="port-img-fallback">
+            <span>PROJECT 03</span>
+          </div>
+          <div class="port-overlay">
+            <a href="https://drive.google.com/file/d/1D1lxcYUw1LMeSKzuEYy4rbRotns3gnG0/view?usp=drivesdk" target="_blank" class="port-link-btn">LIHAT</a>
+          </div>
+        </div>
+        <div class="port-info">
+          <span class="port-tag">Desain</span>
+          <span class="port-tag">Canva</span>
+          <h3 class="port-title">Projek Brand Logo</h3>
+          <p class="port-desc">Projek custom logo dengan harapan dapat dijadikan bisnis.</p>
+          <a href="https://drive.google.com/file/d/1D1lxcYUw1LMeSKzuEYy4rbRotns3gnG0/view?usp=drivesdk" target="_blank" class="port-ext-link">Lihat Karya →</a>
+        </div>
+      </div>
+
+      <!-- KARYA 04 -->
+      <div class="portfolio-card fade-in">
+        <div class="port-img-wrap">
+          <img src="foto/foto porto04.jpeg" alt="Project 04" class="port-img" />
+          <div class="port-img-fallback">
+            <span>PROJECT 04</span>
+          </div>
+          <div class="port-overlay">
+            <a href="https://drive.google.com/drive/folders/1TgCGrR1gssCBXzGrOExj0z8sXcXXG6lp?usp=drive_link" target="_blank" class="port-link-btn">LIHAT</a>
+          </div>
+        </div>
+        <div class="port-info">
+          <span class="port-tag">Blynk</span>
+          <span class="port-tag">IoT</span>
+          <span class="port-tag">Arduino IDE</span>
+          <h3 class="port-title">Smart Fish Feeder</h3>
+          <p class="port-desc">Projek IoT pemberi pakan ikan otomatis yang terintegrasi dengan Blynk.</p>
+          <a href="https://drive.google.com/drive/folders/1TgCGrR1gssCBXzGrOExj0z8sXcXXG6lp?usp=drive_link" target="_blank" class="port-ext-link">Lihat Karya →</a>
+        </div>
+      </div>
+
+      <!-- KARYA 05 -->
+      <div class="portfolio-card fade-in">
+        <div class="port-img-wrap">
+          <img src="foto/foto porto05.jpeg" alt="Project 05" class="port-img" />
+          <div class="port-img-fallback">
+            <span>PROJECT 05</span>
+          </div>
+          <div class="port-overlay">
+            <a href="https://drive.google.com/drive/folders/1-0ltCHHF3o7gZmuxZk0M5UiFCaRqOaGy?usp=drive_link" target="_blank" class="port-link-btn">LIHAT</a>
+          </div>
+        </div>
+        <div class="port-info">
+          <span class="port-tag">Blynk</span>
+          <span class="port-tag">Arduino IDE</span>
+          <span class="port-tag">IoT</span>
+          <h3 class="port-title">Smart Parking System</h3>
+          <p class="port-desc">Projek IoT sistem parkir cerdas yang terintegrasi dengan Blynk.</p>
+          <a href="https://drive.google.com/drive/folders/1-0ltCHHF3o7gZmuxZk0M5UiFCaRqOaGy?usp=drive_link" target="_blank" class="port-ext-link">Lihat Karya →</a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- GROUP: WEBSITE -->
+    <div class="section-header" style="margin-top: 3rem;">
+      <span class="section-number">02</span>
+      <h2 class="section-title" style="font-size: clamp(1rem, 2.2vw, 1.4rem); color: var(--gold);">WEBSITE</h2>
+      <span class="section-line"></span>
+    </div>
+
+    <div class="portfolio-grid">
+
+      <!-- KARYA 06 -->
+      <div class="portfolio-card fade-in">
+        <div class="port-img-wrap">
+          <img src="foto/foto porto06.png" alt="Project 06" class="port-img" />
+          <div class="port-img-fallback">
+            <span>PROJECT 06</span>
+          </div>
+          <div class="port-overlay">
+            <a href="https://automotivetechnew.page.gd/" target="_blank" class="port-link-btn">LIHAT</a>
+          </div>
+        </div>
+        <div class="port-info">
+          <span class="port-tag">Web</span>
+          <span class="port-tag">HTML</span>
+          <span class="port-tag">CSS</span>
+          <span class="port-tag">JS</span>
+          <h3 class="port-title">Web Automotivetech</h3>
+          <p class="port-desc">Projek web yang berisi mengenai sejarah mobil, mesin, dan teknologi futuristik.</p>
+          <a href="https://automotivetechnew.page.gd/" target="_blank" class="port-ext-link">Lihat Karya →</a>
+        </div>
+      </div>
+
+      <!-- KARYA 07 -->
+      <div class="portfolio-card fade-in">
+        <div class="port-img-wrap">
+          <img src="foto/foto porto07.png" alt="Project 07" class="port-img" />
+          <div class="port-img-fallback">
+            <span>PROJECT 07</span>
+          </div>
+          <div class="port-overlay">
+            <a href="https://sejarahtugumuda.page.gd/" target="_blank" class="port-link-btn">LIHAT</a>
+          </div>
+        </div>
+        <div class="port-info">
+          <span class="port-tag">HTML</span>
+          <span class="port-tag">CSS</span>
+          <span class="port-tag">JS</span>
+          <h3 class="port-title">Web Sejarah Tugu Muda</h3>
+          <p class="port-desc">Web sejarah Tugu Muda yang dapat memberikan informasi kepada masyarakat.</p>
+          <a href="https://sejarahtugumuda.page.gd/" target="_blank" class="port-ext-link">Lihat Karya →</a>
+        </div>
+      </div>
+
+      <!-- KARYA 08 -->
+      <div class="portfolio-card fade-in">
+        <div class="port-img-wrap">
+          <img src="foto/foto porto08.png" alt="Project 08" class="port-img" />
+          <div class="port-img-fallback">
+            <span>PROJECT 08</span>
+          </div>
+          <div class="port-overlay">
+            <a href="https://sway.cloud.microsoft/y7N0xWxqgMgCAncp?ref=Link&loc=play" target="_blank" class="port-link-btn">LIHAT</a>
+          </div>
+        </div>
+        <div class="port-info">
+          <span class="port-tag">Web</span>
+          <span class="port-tag">Sway</span>
+          <h3 class="port-title">Sway Sapta Budaya Simpang Lima</h3>
+          <p class="port-desc">Sebuah web yang memberikan informasi mengenai budaya Jawa.</p>
+          <a href="https://sway.cloud.microsoft/y7N0xWxqgMgCAncp?ref=Link&loc=play" target="_blank" class="port-ext-link">Lihat Karya →</a>
+        </div>
+      </div>
+
+      <!-- KARYA 09 -->
+      <div class="portfolio-card fade-in">
+        <div class="port-img-wrap">
+          <img src="foto/foto porto09.png" alt="Project 09" class="port-img" />
+          <div class="port-img-fallback">
+            <span>PROJECT 09</span>
+          </div>
+          <div class="port-overlay">
+            <a href="http://dinamikapadazamanreformasi1.page.gd/" target="_blank" class="port-link-btn">LIHAT</a>
+          </div>
+        </div>
+        <div class="port-info">
+          <span class="port-tag">HTML</span>
+          <span class="port-tag">CSS</span>
+          <span class="port-tag">JS</span>
+          <h3 class="port-title">Web Sejarah Reformasi</h3>
+          <p class="port-desc">Web yang menampilkan sejarah mengenai presiden dalam dinamika politik dan ekonominya.</p>
+          <a href="http://dinamikapadazamanreformasi1.page.gd/" target="_blank" class="port-ext-link">Lihat Karya →</a>
+        </div>
+      </div>
+
+      <!-- KARYA 10 -->
+      <div class="portfolio-card fade-in">
+        <div class="port-img-wrap">
+          <img src="foto/foto porto10.png" alt="Project 10" class="port-img" />
+          <div class="port-img-fallback">
+            <span>PROJECT 10</span>
+          </div>
+          <div class="port-overlay">
+            <a href="https://sites.google.com/view/reformasieramegawati/profile" target="_blank" class="port-link-btn">LIHAT</a>
+          </div>
+        </div>
+        <div class="port-info">
+          <span class="port-tag">Google Sites</span>
+          <h3 class="port-title">Google Site Sejarah</h3>
+          <p class="port-desc">Artikel sejarah mengenai salah satu presiden di Indonesia.</p>
+          <a href="https://sites.google.com/view/reformasieramegawati/profile" target="_blank" class="port-ext-link">Lihat Karya →</a>
+        </div>
+      </div>
+
+      <!-- KARYA 11 -->
+      <div class="portfolio-card fade-in">
+        <div class="port-img-wrap">
+          <img src="foto/foto porto11.png" alt="Project 11" class="port-img" />
+          <div class="port-img-fallback">
+            <span>PROJECT 11</span>
+          </div>
+          <div class="port-overlay">
+            <a href="https://afnanfungsiinvers.page.gd/" target="_blank" class="port-link-btn">LIHAT</a>
+          </div>
+        </div>
+        <div class="port-info">
+          <span class="port-tag">Web</span>
+          <span class="port-tag">HTML</span>
+          <span class="port-tag">CSS</span>
+          <span class="port-tag">JS</span>
+          <span class="port-tag">Matematika</span>
+          <h3 class="port-title">Web Fungsi Invers</h3>
+          <p class="port-desc">Web pembelajaran materi fungsi invers.</p>
+          <a href="https://afnanfungsiinvers.page.gd/" target="_blank" class="port-ext-link">Lihat Karya →</a>
+        </div>
+      </div>
+
+      <!-- KARYA 12 -->
+      <div class="portfolio-card fade-in">
+        <div class="port-img-wrap">
+          <img src="foto/foto porto12.png" alt="Project 12" class="port-img" />
+          <div class="port-img-fallback">
+            <span>PROJECT 12</span>
+          </div>
+          <div class="port-overlay">
+            <a href="https://sites.google.com/view/afnanfauzi03-matpel-kik/beranda" target="_blank" class="port-link-btn">LIHAT</a>
+          </div>
+        </div>
+        <div class="port-info">
+          <span class="port-tag">Google Sites</span>
+          <span class="port-tag">KIK</span>
+          <h3 class="port-title">Google Site Matpel KIK</h3>
+          <p class="port-desc">Google Site mata pelajaran KIK berisi beranda, evaluasi &amp; target, pengumpulan tugas, dan tentang saya.</p>
+          <a href="https://sites.google.com/view/afnanfauzi03-matpel-kik/beranda" target="_blank" class="port-ext-link">Lihat Karya →</a>
+        </div>
+      </div>
+
+      <!-- KARYA 13 -->
+      <div class="portfolio-card fade-in">
+        <div class="port-img-wrap">
+          <img src="foto/foto porto13.png" alt="Project 13" class="port-img" />
+          <div class="port-img-fallback">
+            <span>PROJECT 13</span>
+          </div>
+          <div class="port-overlay">
+            <a href="https://afn57.github.io/web-ppkn/" target="_blank" class="port-link-btn">LIHAT</a>
+          </div>
+        </div>
+        <div class="port-info">
+          <span class="port-tag">Web</span>
+          <span class="port-tag">GitHub Pages</span>
+          <span class="port-tag">PPKn</span>
+          <h3 class="port-title">Web PPKn Analisis SWOT</h3>
+          <p class="port-desc">Web tugas PPKn berisi analisis SWOT "Indonesia di Era Global" (Kelompok 2).</p>
+          <a href="https://afn57.github.io/web-ppkn/" target="_blank" class="port-ext-link">Lihat Karya →</a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- GROUP: COMPETITION AND SEMINAR-->
+    <div class="section-header" style="margin-top: 3rem;">
+      <span class="section-number">03</span>
+      <h2 class="section-title" style="font-size: clamp(1rem, 2.2vw, 1.4rem); color: var(--gold);">LOMBA DAN SEMINAR</h2>
+      <span class="section-line"></span>
+    </div>
+
+    <div class="portfolio-grid">
+
+      <!-- KARYA 14 -->
+      <div class="portfolio-card fade-in">
+        <div class="port-img-wrap">
+          <img src="foto/foto porto14.jpeg" alt="Project 14" class="port-img" />
+          <div class="port-img-fallback">
+            <span>PROJECT 14</span>
+          </div>
+          <div class="port-overlay">
+            <a href="https://drive.google.com/drive/folders/1Tl0rq6AezFkGSSDvSjkcICYl0euTkr4F?usp=drive_link" target="_blank" class="port-link-btn">LIHAT</a>
+          </div>
+        </div>
+        <div class="port-info">
+          <span class="port-tag">Lomba</span>
+          <span class="port-tag">DIGIForward 2026</span>
+          <span class="port-tag">Hackathon</span>
+          <span class="port-tag">AI</span>
+          <h3 class="port-title">Hackathon DIGIForward 2026</h3>
+          <p class="port-desc">Lomba pengembangan solusi berbasis software dengan Cognitive Automation dan AI.</p>
+          <a href="https://drive.google.com/drive/folders/1Tl0rq6AezFkGSSDvSjkcICYl0euTkr4F?usp=drive_link" target="_blank" class="port-ext-link">Lihat Karya →</a>
+        </div>
+      </div>
+
+      <!-- KARYA 15 -->
+      <div class="portfolio-card fade-in">
+        <div class="port-img-wrap">
+          <img src="foto/foto porto15.jpeg" alt="Project 15" class="port-img" />
+          <div class="port-img-fallback">
+            <span>PROJECT 15</span>
+          </div>
+          <div class="port-overlay">
+            <a href="https://drive.google.com/drive/folders/1NQtTgfaI5KHo-futShH0m38qFsX4gf02?usp=drive_link" target="_blank" class="port-link-btn">LIHAT</a>
+          </div>
+        </div>
+        <div class="port-info">
+          <span class="port-tag">Seminar</span>
+          <span class="port-tag">Lawphoria USM 2026</span>
+          <span class="port-tag">Dokumentasi</span>
+          <h3 class="port-title">Dokumentasi Lawphoria USM 2026</h3>
+          <p class="port-desc">Dokumentasi keikutsertaan pada acara Lawphoria USM 2026.</p>
+          <a href="https://drive.google.com/drive/folders/1NQtTgfaI5KHo-futShH0m38qFsX4gf02?usp=drive_link" target="_blank" class="port-ext-link">Lihat Karya →</a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- GROUP: CERTIFICATE -->
+    <div class="section-header" style="margin-top: 3rem;">
+      <span class="section-number">04</span>
+      <h2 class="section-title" style="font-size: clamp(1rem, 2.2vw, 1.4rem); color: var(--gold);">SERTIFIKAT</h2>
+      <span class="section-line"></span>
+    </div>
+
+    <div class="portfolio-grid">
+
+      <!-- KARYA 16 -->
+      <div class="portfolio-card fade-in">
+        <div class="port-img-wrap">
+          <img src="foto/foto porto16.jpeg" alt="Project 16" class="port-img" />
+          <div class="port-img-fallback">
+            <span>PROJECT 16</span>
+          </div>
+          <div class="port-overlay">
+            <a href="https://drive.google.com/file/d/1GtNehj7ijmWMR3jMQk8-ArRaskO4CqIQ/view?usp=drivesdk" target="_blank" class="port-link-btn">LIHAT</a>
+          </div>
+        </div>
+        <div class="port-info">
+          <span class="port-tag">Sertifikat</span>
+          <span class="port-tag">Cisco Packet Tracer</span>
+          <h3 class="port-title">Sertifikat Cisco</h3>
+          <p class="port-desc">Sertifikat keahlian jaringan komputer dari Cisco.</p>
+          <a href="https://drive.google.com/file/d/1GtNehj7ijmWMR3jMQk8-ArRaskO4CqIQ/view?usp=drivesdk" target="_blank" class="port-ext-link">Lihat Karya →</a>
+        </div>
+      </div>
+
+      <!-- KARYA 17 -->
+      <div class="portfolio-card fade-in">
+        <div class="port-img-wrap">
+          <img src="foto/foto porto17.png" alt="Project 17" class="port-img" />
+          <div class="port-img-fallback">
+            <span>PROJECT 17</span>
+          </div>
+          <div class="port-overlay">
+            <a href="https://drive.google.com/drive/folders/1UFQ5waP5S0GgP-j8PadkWlIITFVeSYj3?usp=drive_link" target="_blank" class="port-link-btn">LIHAT</a>
+          </div>
+        </div>
+        <div class="port-info">
+          <span class="port-tag">Sertifikat</span>
+          <span class="port-tag">AI</span>
+          <h3 class="port-title">Sertifikat Pelatihan AI Senopati Academy</h3>
+          <p class="port-desc">Sertifikat pelatihan AI dari Kepolisian Daerah Semarang.</p>
+          <a href="https://drive.google.com/drive/folders/1UFQ5waP5S0GgP-j8PadkWlIITFVeSYj3?usp=drive_link" target="_blank" class="port-ext-link">Lihat Karya →</a>
+        </div>
+      </div>
+
+      <!-- KARYA 18 -->
+      <div class="portfolio-card fade-in">
+        <div class="port-img-wrap">
+          <img src="foto/foto porto18.png" alt="Project 18" class="port-img" />
+          <div class="port-img-fallback">
+            <span>PROJECT 18</span>
+          </div>
+          <div class="port-overlay">
+            <a href="https://drive.google.com/drive/folders/15UY-UYaqAtypJespTdff1SYyYE4Bl80K?usp=drive_link" target="_blank" class="port-link-btn">LIHAT</a>
+          </div>
+        </div>
+        <div class="port-info">
+          <span class="port-tag">Sertifikat</span>
+          <span class="port-tag">Java Fundamentals</span>
+          <h3 class="port-title">Oracle Academy</h3>
+          <p class="port-desc">Sertifikat Pelatihan Java Fundamentals Oracle Academy.</p>
+          <a href="https://drive.google.com/drive/folders/15UY-UYaqAtypJespTdff1SYyYE4Bl80K?usp=drive_link" target="_blank" class="port-ext-link">Lihat Karya →</a>
+        </div>
+      </div>
+
+      <!-- KARYA 19 -->
+      <div class="portfolio-card fade-in">
+        <div class="port-img-wrap">
+          <img src="foto/foto porto19.jpeg" alt="Project 19" class="port-img" />
+          <div class="port-img-fallback">
+            <span>PROJECT 19</span>
+          </div>
+          <div class="port-overlay">
+            <a href="https://drive.google.com/drive/folders/1yz_RkL28tSmWZ1dV0nSWCZFFWlqP1YKk?usp=drive_link" target="_blank" class="port-link-btn">LIHAT</a>
+          </div>
+        </div>
+        <div class="port-info">
+          <span class="port-tag">Sertifikat</span>
+          <span class="port-tag">Hour of Code</span>
+          <h3 class="port-title">Sertifikat Hours of Code</h3>
+          <p class="port-desc">Sertifikat penyelesaian kegiatan Hours of Code.</p>
+          <a href="https://drive.google.com/drive/folders/1yz_RkL28tSmWZ1dV0nSWCZFFWlqP1YKk?usp=drive_link" target="_blank" class="port-ext-link">Lihat Karya →</a>
+        </div>
+      </div>
+
+      <!-- KARYA 20 -->
+      <div class="portfolio-card fade-in">
+        <div class="port-img-wrap">
+          <img src="foto/foto porto20.png" alt="Project 20" class="port-img" />
+          <div class="port-img-fallback">
+            <span>PROJECT 20</span>
+          </div>
+          <div class="port-overlay">
+            <a href="https://drive.google.com/drive/folders/1e5fqM9KIsMgMz_E-1V43LyOIbOUEKXEh?usp=drive_link" target="_blank" class="port-link-btn">LIHAT</a>
+          </div>
+        </div>
+        <div class="port-info">
+          <span class="port-tag">Sertifikat</span>
+          <span class="port-tag">Lawphoria USM 2026</span>
+          <span class="port-tag">Seminar</span>
+          <h3 class="port-title">Sertifikat Peserta Lawphoria USM 2026</h3>
+          <p class="port-desc">Sertifikat keikutsertaan sebagai peserta Lawphoria USM 2026.</p>
+          <a href="https://drive.google.com/drive/folders/1e5fqM9KIsMgMz_E-1V43LyOIbOUEKXEh?usp=drive_link" target="_blank" class="port-ext-link">Lihat Karya →</a>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <p class="pixel-text">© 2026 AFNAN FAUZI PRAKOSO · MADE WITH PASSION</p>
+    <div class="footer-divider"></div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
